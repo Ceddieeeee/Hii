@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <title>For You ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =================================================
+         OPENING SCREEN
+    ================================================== -->
+
+    <section id="openingScreen" class="screen active">
+
+        <div class="opening-content">
+
+            <p class="small-text">
+                A little something for you
+            </p>
+
+            <button
+                id="startHeart"
+                class="big-heart"
+                aria-label="Start"
+            >
+                ♥
+            </button>
+
+            <p class="tap-text">
+                tap the heart
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         TREE ANIMATION
+    ================================================== -->
+
+    <section id="treeScreen" class="screen">
+
+        <div class="tree-container">
+
+            <p class="tree-message">
+                Watch our little story grow...
+            </p>
+
+
+            <svg
+                id="treeSvg"
+                class="tree-svg"
+                viewBox="0 0 800 800"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+
+                <!-- Soft background glow -->
+
+                <circle
+                    class="tree-glow"
+                    cx="400"
+                    cy="390"
+                    r="270"
+                ></circle>
+
+
+                <!-- ==============================
+                     TREE
+                =============================== -->
+
+                <g id="tree">
+
+                    <!-- Main trunk -->
+
+                    <path
+                        class="tree-branch main-trunk"
+                        d="M400 735
+                           C400 650 398 570 400 500
+                           C400 430 400 365 400 300"
+                    ></path>
+
+
+                    <!-- Left main branch -->
+
+                    <path
+                        class="tree-branch"
+                        d="M400 530
+                           C355 480 315 430 245 385"
+                    ></path>
+
+
+                    <!-- Right main branch -->
+
+                    <path
+                        class="tree-branch"
+                        d="M400 515
+                           C445 465 490 420 555 365"
+                    ></path>
+
+
+                    <!-- Left upper branch -->
+
+                    <path
+                        class="tree-branch"
+                        d="M400 415
+                           C350 370 310 320 275 265"
+                    ></path>
+
+
+                    <!-- Right upper branch -->
+
+                    <path
+                        class="tree-branch"
+                        d="M400 400
+                           C450 355 500 315 530 255"
+                    ></path>
+
+
+                    <!-- Far left -->
+
+                    <path
+                        class="tree-branch"
+                        d="M315 445
+                           C275 420 230 405 185 395"
+                    ></path>
+
+
+                    <!-- Far right -->
+
+                    <path
+                        class="tree-branch"
+                        d="M485 430
+                           C530 405 575 395 620 380"
+                    ></path>
+
+
+                    <!-- Small left branch -->
+
+                    <path
+                        class="tree-branch"
+                        d="M275 385
+                           C255 350 235 325 210 305"
+                    ></path>
+
+
+                    <!-- Small right branch -->
+
+                    <path
+                        class="tree-branch"
+                        d="M555 365
+                           C575 335 595 310 615 285"
+                    ></path>
+
+
+                    <!-- Small upper left -->
+
+                    <path
+                        class="tree-branch"
+                        d="M325 335
+                           C300 300 290 275 285 235"
+                    ></path>
+
+
+                    <!-- Small upper right -->
+
+                    <path
+                        class="tree-branch"
+                        d="M475 335
+                           C500 300 510 275 515 230"
+                    ></path>
+
+                </g>
+
+
+                <!-- ==============================
+                     HEART BLOSSOMS
+                =============================== -->
+
+                <g id="heartBlossoms">
+
+                    <text class="tree-heart heart-1" x="208" y="302">♥</text>
+                    <text class="tree-heart heart-2" x="250" y="345">♥</text>
+                    <text class="tree-heart heart-3" x="190" y="390">♥</text>
+
+                    <text class="tree-heart heart-4" x="280" y="260">♥</text>
+                    <text class="tree-heart heart-5" x="300" y="310">♥</text>
+                    <text class="tree-heart heart-6" x="325" y="355">♥</text>
+
+                    <text class="tree-heart heart-7" x="290" y="220">♥</text>
+                    <text class="tree-heart heart-8" x="350" y="275">♥</text>
+
+                    <text class="tree-heart heart-9" x="390" y="240">♥</text>
+                    <text class="tree-heart heart-10" x="400" y="300">♥</text>
+
+                    <text class="tree-heart heart-11" x="510" y="225">♥</text>
+                    <text class="tree-heart heart-12" x="500" y="275">♥</text>
+                    <text class="tree-heart heart-13" x="475" y="320">♥</text>
+
+                    <text class="tree-heart heart-14" x="615" y="280">♥</text>
+                    <text class="tree-heart heart-15" x="575" y="330">♥</text>
+                    <text class="tree-heart heart-16" x="620" y="375">♥</text>
+
+                    <text class="tree-heart heart-17" x="550" y="370">♥</text>
+                    <text class="tree-heart heart-18" x="500" y="405">♥</text>
+
+                    <text class="tree-heart heart-19" x="245" y="400">♥</text>
+                    <text class="tree-heart heart-20" x="300" y="420">♥</text>
+
+                    <text class="tree-heart heart-21" x="350" y="390">♥</text>
+                    <text class="tree-heart heart-22" x="450" y="390">♥</text>
+
+                    <text class="tree-heart heart-23" x="450" y="340">♥</text>
+                    <text class="tree-heart heart-24" x="370" y="330">♥</text>
+
+                    <text class="tree-heart heart-25" x="360" y="450">♥</text>
+                    <text class="tree-heart heart-26" x="445" y="450">♥</text>
+
+                    <text class="tree-heart heart-27" x="335" y="500">♥</text>
+                    <text class="tree-heart heart-28" x="470" y="500">♥</text>
+
+                    <text class="tree-heart heart-29" x="275" y="350">♥</text>
+                    <text class="tree-heart heart-30" x="530" y="350">♥</text>
+
+                </g>
+
+            </svg>
+
+
+            <p class="tree-finished">
+                And somehow, it keeps growing... ♡
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         MAIN SCREEN
+    ================================================== -->
+
+    <section id="mainScreen" class="screen">
+
+        <div class="main-content">
+
+            <p class="eyebrow">
+                OUR STORY
+            </p>
+
+
+            <h1>
+                Since We Met
+            </h1>
+
+
+            <p class="subtitle">
+                One special day became the beginning
+                of something I never want to forget.
+            </p>
+
+
+            <!-- DAYS SINCE WE MET -->
+
+            <div class="days-card">
+
+                <span
+                    class="days-number"
+                    id="daysCount"
+                >
+                    0
+                </span>
+
+                <span class="days-label">
+                    days since we met
+                </span>
+
+                <span class="meeting-date">
+                    July 15, 2026 · 5:00 PM
+                </span>
+
+            </div>
+
+
+            <!-- LETTER HEART -->
+
+            <button
+                id="letterButton"
+                class="letter-heart-button"
+                aria-label="Open letter"
+            >
+
+                <div class="heart-shape">
+
+                    ♥
+
+
+                    <span class="heart-label">
+                        Letter
+                    </span>
+
+                </div>
+
+            </button>
+
+
+            <p class="letter-hint">
+                tap the heart ♡
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         LETTER SCREEN
+    ================================================== -->
+
+    <section
+        id="letterScreen"
+        class="letter-screen"
+    >
+
+        <div class="letter-overlay"></div>
+
+
+        <div class="letter-window">
+
+            <button
+                id="closeLetter"
+                class="close-button"
+                aria-label="Close letter"
+            >
+                ×
+            </button>
+
+
+            <div class="letter-content">
+
+
+                <!-- LETTER HEADER -->
+
+                <div class="letter-header">
+
+                    <span class="letter-small">
+                        FOR MY FAVORITE PERSON
+                    </span>
+
+                    <h2>
+                        My Wifeyyy, ♡
+                    </h2>
+
+                </div>
+
+
+                <!-- LETTER + PHOTOS -->
+
+                <div class="letter-layout">
+
+
+                    <!-- ==========================
+                         LETTER
+                    =========================== -->
+
+                    <div class="letter-paper">
+
+                        <div
+                            id="typedLetter"
+                            class="typed-letter"
+                        ></div>
+
+                        <span
+                            id="typingCursor"
+                            class="typing-cursor"
+                        >
+                            |
+                        </span>
+
+                    </div>
+
+
+                    <!-- ==========================
+                         PHOTOS
+                    =========================== -->
+
+                    <div class="photo-gallery">
+
+
+                        <button
+                            class="photo-card photo-one"
+                            data-photo="images/us1.jpeg"
+                            aria-label="Open photo 1"
+                        >
+
+                            <img
+                                src="images/us1.jpeg"
+                                alt="Our memory"
+                            >
+
+                        </button>
+
+
+                        <button
+                            class="photo-card photo-two"
+                            data-photo="images/us2.jpg"
+                            aria-label="Open photo 2"
+                        >
+
+                            <img
+                                src="images/us2.jpg"
+                                alt="Our memory"
+                            >
+
+                        </button>
+
+
+                        <button
+                            class="photo-card photo-three"
+                            data-photo="images/us3.jpeg"
+                            aria-label="Open photo 3"
+                        >
+
+                            <img
+                                src="images/us3.jpeg"
+                                alt="Our memory"
+                            >
+
+                        </button>
+
+
+                        <button
+                            class="photo-card photo-four"
+                            data-photo="images/us4.jpeg"
+                            aria-label="Open photo 4"
+                        >
+
+                            <img
+                                src="images/us4.jpeg"
+                                alt="Our memory"
+                            >
+
+                        </button>
+
+
+                        <button
+                            class="photo-card photo-five"
+                            data-photo="images/us5.jpeg"
+                            aria-label="Open photo 5"
+                        >
+
+                            <img
+                                src="images/us5.jpeg"
+                                alt="Our memory"
+                            >
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="letter-footer">
+                    Always yours, ♡
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         EXPANDED PHOTO VIEW
+    ================================================== -->
+
+    <div
+        id="photoViewer"
+        class="photo-viewer"
+    >
+
+        <div class="photo-viewer-backdrop"></div>
+
+
+        <button
+            id="closePhoto"
+            class="photo-close"
+            aria-label="Close photo"
+        >
+            ×
+        </button>
+
+
+        <div class="expanded-photo-container">
+
+            <img
+                id="expandedPhoto"
+                src=""
+                alt="Expanded memory"
+            >
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
